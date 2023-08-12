@@ -70,5 +70,5 @@
       ]
     }
   },
-  "postStartCommand": "pip install -U pip && poetry self update && poetry install --no-interaction"
+  "postStartCommand": "pip install -U pip && poetry self update && poetry install --no-interaction --without prod"
 }
