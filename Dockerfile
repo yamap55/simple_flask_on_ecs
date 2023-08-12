@@ -26,11 +26,10 @@ RUN curl -sSL https://install.python-poetry.org | python -
 
 COPY . .
 
-RUN poetry install --only main --sync
+RUN poetry install --only main,prod --sync
 
 ENV DEBIAN_FRONTEND=
 
 WORKDIR /project/api
 
-# FIXME: use gunicorn
-CMD ["poetry", "run", "flask", "run", "-h", "0.0.0.0"]
+CMD ["poetry", "run", "gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
