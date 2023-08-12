@@ -1,6 +1,6 @@
 version: "3"
 services:
-  python_repository_simple:
+  simple_flask_on_ecs:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
@@ -8,7 +8,7 @@ services:
         WORKDIR: /project
     volumes:
       - ..:/project
-    image: python_repository_simple-image
-    container_name: python_repository_simple-container
+    image: simple_flask_on_ecs-image
+    container_name: simple_flask_on_ecs-container
     tty: true
     env_file: ../.env # shellスクリプト内でも環境変数として使用するため
