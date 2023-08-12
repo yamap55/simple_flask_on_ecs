@@ -1,7 +1,13 @@
 .pytest_cache
+__pycache__
+logs
+tests
 build
 dist
 work
 .coverage
 .git
 .devcontainer/
+.github
+.ruff_cache
+.venv
