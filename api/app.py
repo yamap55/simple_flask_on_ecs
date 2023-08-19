@@ -24,3 +24,9 @@ def get_tasks():
         },
     ]
     return jsonify(tasks)
+
+
+@app.route("/healthcheck")
+def healthcheck():
+    """healthcheck"""
+    return "OK"
