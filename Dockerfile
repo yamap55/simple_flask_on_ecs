@@ -32,4 +32,4 @@ ENV DEBIAN_FRONTEND=
 
 WORKDIR /project/api
 
-CMD ["poetry", "run", "gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
+CMD ["poetry", "run", "gunicorn", "--bind", "0.0.0.0:8000", "--log-level", "debug", "app:app"]
